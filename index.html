@@ -1,56 +1,97 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="/fonts" />
-    <style>
-      body {
-        background: rgb(231, 231, 231);
-        background: linear-gradient(
-          90deg,
+
+<head>
+  <link rel="stylesheet" href="/fonts" />
+  <style>
+    body {
+      background: rgb(231, 231, 231);
+      background: linear-gradient(90deg,
           rgba(231, 231, 231, 1) 0%,
           rgba(252, 252, 252, 1) 45%,
-          rgba(235, 235, 235, 1) 100%
-        );
+          rgba(235, 235, 235, 1) 100%);
+    }
+
+    .center-text {
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    p {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      margin: 7px 0px;
+    }
+
+    h1,
+    h2 {
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      max-width: 580px;
+      margin: auto;
+      display: block;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    ul {
+      padding: 0px 20px;
+      margin: 0px;
+    }
+
+    .round {
+      border-radius: 10px;
+    }
+
+    .div-box-shadow {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      .content {
+        max-width: 900px;
+        padding: 10px;
       }
-      .center-text {
-        text-align: center;
-      }
-      h1,
-      h2,
+
       p {
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-        margin: 7px 0px;
+        margin-bottom: 20px;
       }
+
       h1,
       h2 {
-        margin-top: 25px;
-        margin-bottom: 10px;
+        margin: 30px 0px;
       }
-      .content {
-        max-width: 550px;
-        margin: auto;
-      }
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-      }
-      ul {
-        padding: 0px 20px;
-        margin: 0px;
-      }
-    </style>
-    <title>MyInsta docs</title>
-    <meta name="telegram:channel" content="@the-shichko" />
-  </head>
-  <body>
-    <div class="content">
+    }
+
+    .default-image {
+      width: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <title>MyInsta docs</title>
+  <meta name="telegram:channel" content="@the-shichko" />
+</head>
+
+<body>
+  <div class="content">
+    <div>
       <h1 class="center-text">MyInsta</h1>
       <div>
         <p><b>Телеграм бот</b> позволяет частично заменить Инстаграм-клиент.</p>
-        <img class="center" src="img/qrcode.jpg" width="300" />
+        <img class="center round" src="img/qrcode.jpg" width="100%" />
       </div>
       <div>
         <h2>Основная информация</h2>
@@ -59,24 +100,42 @@
           <b>анонимным</b>. Далее будут расписаны возможности MyInsta.
         </p>
       </div>
+    </div>
+    <div>
+      <h2>Получение историй пользователей</h2>
+      <p>
+        Для получения историй пользователя используется команда
+        <b>/stories</b>.
+        После нажатия команды, бот ожидает имя (никнэйм) инста-аккаунта.
+      </p>
+      <p>
+        Имя можно <b>ввести сообщением</b> <i>(the_shichko.cs)</i> либо <b>выбрать</b> из предложенной панели.
+      </p>
       <div>
-        <h2>Получение историй пользователей</h2>
-        <p>
-          Для получения историй пользователя используется команда
-          <b>/stories</b>
-        </p>
-        <img src="img/storiesExample.png" width="550" />
-        <p>Панель пользователей появляется в двух случаях:</p>
-        <ul>
-          <li>
-            <p>
-              У авторизированных пользователей, список имитирует верхнюю ленту
-              историй инстаграма.
-            </p>
-          </li>
-          <li><p>У анонимных пользователях, </p></li>
-        </ul>
+        <img class="default-image round" src="img/storiesExample.png" width="100%" />
+      </div>
+      <p><b>Панель пользователей</b> появляется в 2-х случаях:</p>
+      <ul>
+        <li>
+          <p>
+            У авторизированных пользователей, список имитирует верхнюю ленту
+            историй инстаграма.
+          </p>
+        </li>
+        <li>
+          <p>У анонимных пользователях, при частом получении историй инста-аккаунта.</p>
+        </li>
+      </ul>
+      <div>
+        <p><i><b>Примечание:</b> необязательно при каждом вводе инста-аккаунта использовать команду /stories. Бот
+            запоминает ваше последнее состояние (команду).</i></p>
       </div>
     </div>
-  </body>
+    <div>
+      <h2>Получение ленты инстаграмма</h2>
+
+    </div>
+  </div>
+</body>
+
 </html>
