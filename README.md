@@ -1,1 +1,1 @@
-# Visit site https://myinsta.github.io
+# Visit site https://the-shichko.github.io/myinsta-info/
